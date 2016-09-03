@@ -23,7 +23,7 @@ cache:
 test_script:
   # Output useful info for debugging.
   - npm version
-  - cmd: npm run test-all
+  - cmd: npm run test:coverAppveyor
 
 # Don't actually build.
 build: off
