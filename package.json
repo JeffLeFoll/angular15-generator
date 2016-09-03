@@ -9,6 +9,7 @@
   "scripts": {
     "test": "mocha ./src/**/*_spec.js --reporter spec --recursive",
     "test:cover": "istanbul cover _mocha -- -u exports -R spec ./src/**/*_spec.js",
+    "test:coverAppveyor": "istanbul cover _mocha -- -u exports -R mocha-appveyor-reporter ./src/**/*_spec.js",
     "lint": "eslint .; exit 0"
   },
   "repository": {
@@ -38,6 +39,7 @@
     "chai": "^3.5.0",
     "eslint": "^3.4.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "mocha-appveyor-reporter": "^0.2.1"
   }
 }
