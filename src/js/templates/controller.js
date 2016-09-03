@@ -2,7 +2,7 @@
 
 exports.controllerTemplate = function (name) {
 
-    return `
+  return `
 
 export class ${name}Controller {
     

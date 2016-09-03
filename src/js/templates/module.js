@@ -2,7 +2,7 @@
 
 exports.moduleTemplate = function (name) {
 
-    return `
+  return `
 
 import {${name}Component} from './${name}.component.ts';
 

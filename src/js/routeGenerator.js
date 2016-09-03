@@ -1,41 +1,40 @@
 'use strict';
 
-let mkdirp = require('mkdirp');
-let fs = require('fs');
+let fse = require('fs-extra');
 let path = require('path');
-let moduleTplt = require("./templates/module").moduleTemplate;
-let routeTplt = require("./templates/route").routeTemplate;
-let componentTplt = require("./templates/component").componentTemplate;
-let controllerTplt = require("./templates/controller").controllerTemplate;
+let moduleTplt = require('./templates/module').moduleTemplate;
+let routeTplt = require('./templates/route').routeTemplate;
+let componentTplt = require('./templates/component').componentTemplate;
+let controllerTplt = require('./templates/controller').controllerTemplate;
 
 class RouteGenerator {
 
-    constructor(routeName) {
-        this.componentName = routeName;
+  constructor(routeName) {
+    this.routeName = routeName;
 
-        this.filePath = path.join('src', 'ts', 'app', 'routes', this.componentName);
+    this.filePath = path.join('src', 'ts', 'app', 'routes', this.routeName);
 
-        mkdirp.sync(this.filePath);
-    }
+    fse.mkdirsSync(this.filePath);
+  }
 
-    buildRoute() {
-        this._createNewFiles();
+  buildRoute() {
+    this._createNewFiles();
 
-        this._updateOrCreateRouteConfig();
-    }
+    this._updateOrCreateRouteConfig();
+  }
 
-    _createNewFiles() {
+  _createNewFiles() {
 
-        fs.writeFileSync(path.join(this.filePath, `${this.componentName}.component.ts`), componentTplt(this.componentName));
-        fs.writeFileSync(path.join(this.filePath, `${this.componentName}.controller.ts`), controllerTplt(this.componentName));
-        fs.writeFileSync(path.join(this.filePath, `${this.componentName}.module.ts`), moduleTplt(this.componentName));
-        fs.writeFileSync(path.join(this.filePath, `${this.componentName}.route.ts`), routeTplt(this.componentName));
-        fs.writeFileSync(path.join(this.filePath, `${this.componentName}.template.html`), '');
-    }
+    fse.writeFileSync(path.join(this.filePath, `${this.routeName}.component.ts`), componentTplt(this.routeName));
+    fse.writeFileSync(path.join(this.filePath, `${this.routeName}.controller.ts`), controllerTplt(this.routeName));
+    fse.writeFileSync(path.join(this.filePath, `${this.routeName}.module.ts`), moduleTplt(this.routeName));
+    fse.writeFileSync(path.join(this.filePath, `${this.routeName}.route.ts`), routeTplt(this.routeName));
+    fse.writeFileSync(path.join(this.filePath, `${this.routeName}.template.html`), '');
+  }
 
-    _updateOrCreateRouteConfig() {
+  _updateOrCreateRouteConfig() {
 
-    }
+  }
 }
 
 module.exports = RouteGenerator;
