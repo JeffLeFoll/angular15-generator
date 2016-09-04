@@ -3,11 +3,20 @@
 const RouteGenerator = require('../src/js/routeGenerator');
 const ComponentGenerator = require('../src/js/componentGenerator');
 
-var argv = require('yargs').argv;
+/*var argv = require('yargs').argv;
 var commandeName = argv._[0];
-var name = argv._[1];
+var name = argv._[1]; */
+
+require('yargs')
+  .commandDir('command')
+  .demand(1)
+  .help()
+  .argv
+
+
 
 if (commandeName === 'route') {
+
   var rg = new RouteGenerator(name);
   rg.buildRoute();
 

@@ -2,9 +2,9 @@
 
 let fse = require('fs-extra');
 let path = require('path');
-let moduleTplt = require('./templates/module').moduleTemplate;
-let componentTplt = require('./templates/component').componentTemplate;
-let controllerTplt = require('./templates/controller').controllerTemplate;
+let moduleTplt = require('./templates/component/module').moduleTemplate;
+let componentTplt = require('./templates/component/component').componentTemplate;
+let controllerTplt = require('./templates/component/controller').controllerTemplate;
 
 class ComponentGenerator {
 

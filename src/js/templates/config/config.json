@@ -1,0 +1,4 @@
+{
+  "componentRoot": "src/ts/app/components",
+  "routeRoot": "src/ts/app/routes"
+}
