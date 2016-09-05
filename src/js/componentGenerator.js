@@ -2,16 +2,16 @@
 
 let fse = require('fs-extra');
 let path = require('path');
-let moduleTplt = require('./templates/component/module').moduleTemplate;
+let moduleTplt = require('./templates/component/component_module').componentModuleTemplate;
 let componentTplt = require('./templates/component/component').componentTemplate;
 let controllerTplt = require('./templates/component/controller').controllerTemplate;
 
 class ComponentGenerator {
 
-  constructor(componentName) {
+  constructor(componentName, config) {
     this.componentName = componentName;
 
-    this.filePath = path.join('src', 'ts', 'app', 'components', this.componentName);
+    this.filePath = path.join(path.normalize(config.getComponentsRoot()), this.componentName);
 
     fse.mkdirsSync(this.filePath);
   }

@@ -20,4 +20,4 @@ MIT
 [david-badge]: https://david-dm.org/JeffLeFoll/angular15-generator.svg
 [david-badge-url]: https://david-dm.org/JeffLeFoll/angular15-generator
 [david-dev-badge]: https://david-dm.org/JeffLeFoll/angular15-generator/dev-status.svg
-[david-dev-badge-url]: https://david-dm.org/JeffLeFoll/angular15-generator#info=devDependencies
+[david-dev-badge-url]: https://david-dm.org/JeffLeFoll/angular15-generator?type=dev

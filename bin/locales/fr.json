@@ -1,3 +1,6 @@
 {
-  "configDesc": "Créer le fichier de configuration pour remplacer la configuration par défaut"
+  "configDesc": "Génère le fichier de configuration pour remplacer la configuration par défaut",
+  "generateDesc": "Génère angular [component|route component] Angular en TypeScript",
+  "routeDesc": "Génère un 'route component' nommé <name>",
+  "componentDesc": "Génère un 'component' nommé <name>"
 }

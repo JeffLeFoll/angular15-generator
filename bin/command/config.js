@@ -2,10 +2,11 @@
 
 let Locales = require('../locales/locales');
 const y18n = new Locales();
+const ConfigGenerator = require('../../src/js/configGenerator');
 
-exports.command = 'c';
+exports.command = 'config';
 exports.desc = y18n.localized('configDesc');
 exports.builder = {};
 exports.handler = function (argv) {
-  console.log('init called for dir', argv.dir)
+  ConfigGenerator.writeDefaultConfigFile();
 };

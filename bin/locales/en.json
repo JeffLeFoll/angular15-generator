@@ -1,3 +1,6 @@
 {
-  "configDesc": "Create the config file to override default config"
+  "configDesc": "Create the config file to override default config",
+  "generateDesc": "Generate an Angular [component|route component] in TypeScript",
+  "routeDesc": "Generate a 'route component' named <name>",
+  "componentDesc": "Generate a 'component' named <name>"
 }

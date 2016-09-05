@@ -2,17 +2,18 @@
 
 let fse = require('fs-extra');
 let path = require('path');
-let moduleTplt = require('./templates/component/module').moduleTemplate;
+let moduleTplt = require('./templates/component/route_module').routeModuleTemplate;
 let routeTplt = require('./templates/component/route').routeTemplate;
 let componentTplt = require('./templates/component/component').componentTemplate;
 let controllerTplt = require('./templates/component/controller').controllerTemplate;
+let ConfigResolver = require('./configResolver');
 
 class RouteGenerator {
 
-  constructor(routeName) {
+  constructor(routeName, config) {
     this.routeName = routeName;
 
-    this.filePath = path.join('src', 'ts', 'app', 'routes', this.routeName);
+    this.filePath = path.join(path.normalize(config.getRoutesRoot()), this.routeName);
 
     fse.mkdirsSync(this.filePath);
   }

@@ -4,13 +4,14 @@ exports.routeTemplate = function (name) {
 
   return `
 
-import {${name}Component} from './${name}.component.ts';
+${name}Route.$inject = ['$routeProvider', '$locationProvider'];
+export function ${name}Route($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) {
+    $routeProvider
+        .when('/${name}', {
+            template: '<${name}></${name}>'
+        });
 
-export class ${name}Route {
-    
-    constructor() {}
-
+    $locationProvider.html5Mode(true);
 }
 `
-
 };
