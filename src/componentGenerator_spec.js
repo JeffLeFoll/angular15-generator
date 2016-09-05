@@ -3,10 +3,12 @@
 let path = require('path');
 let fse = require('fs-extra');
 let expect = require('chai').expect;
-const ComponentGenerator = require('./componentGenerator');
+let ConfigResolver = require('./configResolver');
+let ComponentGenerator = require('./componentGenerator');
 
+const config = new ConfigResolver();
 const componentName = 'userlist';
-const testPath = path.join('src', 'ts', 'app', 'components', componentName);
+const testPath = path.join(config.getComponentsRoot(), componentName);
 
 describe('ComponentGenerator functionalities', function () {
 
@@ -15,13 +17,13 @@ describe('ComponentGenerator functionalities', function () {
 
   it('should create the folder structure for the new component when initialized', function () {
 
-    new ComponentGenerator(componentName);
+    new ComponentGenerator(componentName, config);
 
     checkIfDirectoriesExists(componentName);
   });
 
   it('should create all the files needed for the new component', function () {
-    var cg = new ComponentGenerator(componentName);
+    var cg = new ComponentGenerator(componentName, config);
 
     cg._createNewFiles();
 
@@ -30,7 +32,7 @@ describe('ComponentGenerator functionalities', function () {
 
 
   after(function () {
-    fse.removeSync('./src/ts');
+    fse.removeSync('./src/app');
   });
 
 });
@@ -56,5 +58,6 @@ function chekIfFilesExistsAndAreCorrects() {
   expect(controllerFile, '[controllerFile]').to.have.string(`export class ${componentName}Controller`);
 
   var moduleFile = fse.readFileSync(testPath + path.sep + `${componentName}.module.ts`, 'utf8');
-  expect(moduleFile, '[moduleFile]').to.have.string(`export class ${componentName}Module`);
+  expect(moduleFile, '[moduleFile]').to.have.string(`export let ${componentName}Module`);
+  expect(moduleFile, '[moduleFile]').to.not.have.string(`.config(${componentName}Route);`);
 }

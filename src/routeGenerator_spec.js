@@ -2,11 +2,13 @@
 
 let path = require('path');
 let fse = require('fs-extra');
-let expect = require('chai').expect;
-const RouteGenerator = require('./routeGenerator');
+let expect = require('chai').expect
+let ConfigResolver = require('./configResolver');
+let RouteGenerator = require('./routeGenerator');
 
+const config = new ConfigResolver();
 const routeName = 'login';
-const testPath = path.join('src', 'ts', 'app', 'routes', routeName);
+const testPath = path.join(config.getRoutesRoot(), routeName);
 
 describe('RouteGenerator functionalities', function () {
 
@@ -15,13 +17,13 @@ describe('RouteGenerator functionalities', function () {
 
   it('should create the folder structure for the new route when initialized', function () {
 
-    new RouteGenerator(routeName);
+    new RouteGenerator(routeName, config);
 
     checkIfDirectoriesExists();
   });
 
   it('should create all the files needed for the new route', function () {
-    var rg = new RouteGenerator(routeName);
+    var rg = new RouteGenerator(routeName, config);
 
     rg._createNewFiles();
 
@@ -29,7 +31,7 @@ describe('RouteGenerator functionalities', function () {
   });
 
   after(function () {
-    fse.removeSync('./src/ts');
+    fse.removeSync('./src/app');
   });
 
 });
@@ -55,8 +57,10 @@ function chekIfFilesExistsAndAreCorrects() {
   expect(controllerFile, '[controllerFile]').to.have.string(`export class ${routeName}Controller`);
 
   var moduleFile = fse.readFileSync(testPath + path.sep + `${routeName}.module.ts`, 'utf8');
-  expect(moduleFile, '[moduleFile]').to.have.string(`export class ${routeName}Module`);
+  expect(moduleFile, '[moduleFile]').to.have.string(`export let ${routeName}Module`);
+  expect(moduleFile, '[moduleFile]').to.have.string(`.config(${routeName}Route);`);
 
   var routeFile = fse.readFileSync(testPath + path.sep + `${routeName}.route.ts`, 'utf8');
-  expect(routeFile, '[routeFile]').to.have.string(`export class ${routeName}Route`);
+  expect(routeFile, '[routeFile]').to.have.string(`export function ${routeName}Route`);
+
 }
