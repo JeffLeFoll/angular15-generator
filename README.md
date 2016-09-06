@@ -1,4 +1,5 @@
 ## angular15-generator
+[![Latest NPM release][npm-badge]][npm-badge-url]
 [![TravisCI Build Status][travis-badge]][travis-badge-url]
 [![AppVeyor Build Status][appveyor-badge]][appveyor-badge-url]
 [![Test Coverage][coveralls-badge]][coveralls-badge-url]
@@ -87,6 +88,8 @@ Feel free to send a PR with your locale file (see in `/bin/locales`).
 
 This project is licensed under the [MIT License](LICENSE).
 
+[npm-badge]: https://img.shields.io/npm/v/angular15-generator.svg
+[npm-badge-url]: https://www.npmjs.com/package/angular15-generator
 [travis-badge]: https://img.shields.io/travis/JeffLeFoll/angular15-generator/master.svg?label=TravisCI
 [travis-badge-url]: https://travis-ci.org/JeffLeFoll/angular15-generator
 [appveyor-badge]: https://img.shields.io/appveyor/ci/JeffLeFoll/angular15-generator/master.svg?label=AppVeyor
