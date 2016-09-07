@@ -24,7 +24,7 @@ The generated project has dependencies that require **Node 4.x.x and NPM 3.x.x**
 
 **BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
 ```bash
-npm install angular15-generator
+npm install -g angular15-generator
 ```
 
 ## Default structure

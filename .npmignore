@@ -1,0 +1,5 @@
+.eslintignore
+.eslintrc.json
+.gitignore
+.travis.yml
+appveyor.yml

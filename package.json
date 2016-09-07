@@ -2,14 +2,14 @@
   "name": "angular15-generator",
   "version": "0.1.0-beta2",
   "description": "CLI tool to generate Angular 1.5 w/ TypeScript Routes and Components like Angular 2 CLI",
-  "main": "",
+  "main": "lib/cli/index.js",
   "bin": {
-    "ag": "bin/cli.js"
+    "ag": "./bin/ag"
   },
   "scripts": {
-    "test": "mocha ./src/**/*_spec.js --reporter spec --recursive",
-    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./src/**/*_spec.js",
-    "test:coverAppveyor": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./src/**/*_spec.js",
+    "test": "mocha ./lib/**/*_spec.js --reporter spec --recursive",
+    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js",
+    "test:coverAppveyor": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./lib/**/*_spec.js",
     "lint": "eslint .; exit 0"
   },
   "repository": {
@@ -29,7 +29,7 @@
   "author": "Jean-Francois Le Foll (@JeffLeFoll)",
   "license": "MIT",
   "engines": {
-    "node": ">= 4.1.0"
+    "node": ">= 4.5.0"
   },
   "dependencies": {
     "fs-extra": "^0.30.0",
