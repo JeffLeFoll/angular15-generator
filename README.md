@@ -18,6 +18,7 @@ The generated project has dependencies that require **Node 4.x.x and NPM 3.x.x**
 * [Usage](#usage)
 * [Generating Components and Routes Components](#generating-components-and-routes-components)
 * [Configuration](#configuration)
+* [Updating](#updating)
 * [Contributing](#contributing)
 
 ## Installation
@@ -77,6 +78,23 @@ You can edit this file to specify your project's structure.
 }
 ```
 (This is the config.json file for our default project structure)
+
+### Updating
+
+To update `angular15-generator` to a new version, you must update both the global package and your project's local package.
+
+Global package:
+```
+npm uninstall -g angular15-generator
+npm cache clean
+npm install -g angular15-generator@latest
+```
+
+Local project package:
+```
+rm -rf node_modules dist tmp
+npm install --save-dev angular15-generator@latest
+```
 
 ## Contributing
 
