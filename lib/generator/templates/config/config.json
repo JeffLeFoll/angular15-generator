@@ -1,4 +1,6 @@
 {
   "componentsRoot": "src/app/components",
-  "routesRoot": "src/app/routes"
+  "routesRoot": "src/app/routes",
+  "componentsRootModule": "index.ts",
+  "routesRootModule": "index.ts"
 }

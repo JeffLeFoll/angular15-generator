@@ -10,7 +10,7 @@ A command line utility to quickly generate angular 1.5 component and route-compo
 
 ## Prerequisites
 
-The generated project has dependencies that require **Node 4.x.x and NPM 3.x.x**.
+The generated project has dependencies that require **Node 4.5.x and NPM 3.x.x**.
 
 ## Table of Contents
 
