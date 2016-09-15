@@ -17,6 +17,7 @@ The generated project has dependencies that require **Node 4.5.x and NPM 3.x.x**
 * [Installation](#installation)
 * [Usage](#usage)
 * [Generating Components and Routes Components](#generating-components-and-routes-components)
+* [Generating or Updating Components/Routes module's index file](#generating-or-updating-components/Routes-module's-index-file)
 * [Configuration](#configuration)
 * [Updating](#updating)
 * [Contributing](#contributing)
@@ -46,6 +47,9 @@ If this is not your project structure, please have a look at the [Configuration]
 
 ```bash
 ag --help
+ag g --help
+ag g component --help
+ag g route --help
 ```
 
 ### Generating Components and Routes Components
@@ -53,10 +57,18 @@ ag --help
 You can use the `ag g` command to generate Angular components:
 
 ```bash
-ag g --help
-
 ag g component my-new-component
 ag g route my-new-route-component
+```
+
+### Generating or Updating Components/Routes module's index file
+
+You can use the `--uc` to update or create the module's index.ts file
+(with a name or not, the default one is in the config file).
+
+```bash
+ag g component my-new-component --uc
+ag g route my-new-route-component --uc routes.ts
 ```
 
 ### Configuration
@@ -75,9 +87,12 @@ You can edit this file to specify your project's structure.
 {
   "componentsRoot": "src/app/components",
   "routesRoot": "src/app/routes"
+  "componentsRootModuleName": "index.ts",
+  "routesRootModuleName": "index.ts"
 }
 ```
 (This is the config.json file for our default project structure)
+N.B: even on Windows you **should** use the `/` separator, the CLI will handle it correctly.
 
 ### Updating
 
@@ -92,7 +107,7 @@ npm install -g angular15-generator@latest
 
 Local project package:
 ```
-rm -rf node_modules dist tmp
+rm -rf node_modules
 npm install --save-dev angular15-generator@latest
 ```
 
