@@ -17,7 +17,7 @@ The generated project has dependencies that require **Node 4.5.x and NPM 3.x.x**
 * [Installation](#installation)
 * [Usage](#usage)
 * [Generating Components and Routes Components](#generating-components-and-routes-components)
-* [Generating or Updating Components/Routes module's index file](#generating-or-updating-components/Routes-module's-index-file)
+* [Generating or Updating Components/Routes module's index file](#generating-or-updating-componentsroutes-modules-index-file)
 * [Configuration](#configuration)
 * [Updating](#updating)
 * [Contributing](#contributing)
@@ -86,7 +86,7 @@ You can edit this file to specify your project's structure.
 ```json
 {
   "componentsRoot": "src/app/components",
-  "routesRoot": "src/app/routes"
+  "routesRoot": "src/app/routes",
   "componentsRootModuleName": "index.ts",
   "routesRootModuleName": "index.ts"
 }
