@@ -1,6 +1,6 @@
 {
   "name": "angular15-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI tool to generate Angular 1.5 w/ TypeScript Routes and Components like Angular 2 CLI",
   "main": "lib/cli/index.js",
   "bin": {
