@@ -124,7 +124,7 @@ npm install --save-dev angular15-generator@latest
 
 Currently the tool is available in French and English.
 
-Feel free to send a PR with your locale file (see in `/bin/locales`).
+Feel free to send a PR with your locale file (see in `/lib/cli/locales`).
 
 ## License
 
