@@ -55,11 +55,20 @@ ag g route --help
 ### Generating Components and Routes Components
 
 You can use the `ag g` command to generate Angular components:
-
 ```bash
 ag g component my-new-component
 ag g route my-new-route-component
 ```
+
+If you want to create your component / route in an other folder that the one configured 
+you can use the following syntax (**even on Windows system**) : 
+```bash
+ag g component down/my-new-component
+    => will create the component in /src/app/components/down/my-new-component
+ag g route ../up/my-new-route-component
+    => will create the route in /src/app/up/my-new-route-component
+```
+Please note that this is also compatible with the `--uc` flag describe below.
 
 ### Generating or Updating Components/Routes module's index file
 
@@ -73,7 +82,7 @@ ag g route my-new-route-component --uc routes.ts
 
 ### Configuration
 
-If our project's stucture does not match yours, you can override it:
+If our project's structure does not match yours, you can override it:
 
 ```bash
 ag config
