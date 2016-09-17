@@ -198,7 +198,6 @@
     "prefer-spread": "off",
     "prefer-template": "off",
     "quote-props": "off",
-    "quotes": [2, "single"],
     "radix": "off",
     "id-match": "off",
     "id-blacklist": "off",

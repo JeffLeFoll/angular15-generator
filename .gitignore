@@ -5,3 +5,5 @@ coverage
 node_modules
 
 /angular-generator.config.json
+
+src
