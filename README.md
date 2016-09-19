@@ -104,7 +104,7 @@ You can edit this file to specify your project's structure.
 N.B: even on Windows you **should** use the `/` separator, the CLI will handle it correctly.
 
 ### Updating
-
+**Before updating it is recommended to backup your custom config file and regenerate it**
 To update `angular15-generator` to a new version, you must update both the global package and your project's local package.
 
 Global package:
