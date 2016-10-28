@@ -34,7 +34,7 @@
   "dependencies": {
     "fs-extra": "^0.30.0",
     "y18n": "^3.2.1",
-    "yargs": "^5.0.0"
+    "yargs": "^6.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
