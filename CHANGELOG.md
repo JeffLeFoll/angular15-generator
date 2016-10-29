@@ -7,9 +7,9 @@
 
 ### Features
 * **Version info:** Add the '-v' command to display tool's version number.
-([#9](https://github.com/JeffLeFoll/angular15-generator/issues/9)) ([c2bfeca](https://github.com/JeffLeFoll/angular15-generator/commit/c2bfeca))
+([#9](https://github.com/JeffLeFoll/angular15-generator/issues/9)) ([d234a15](https://github.com/JeffLeFoll/angular15-generator/commit/d234a15))
 * **UpdateOrCreate:** Add a config option to enable '--uc' by default. 
-([#7](https://github.com/JeffLeFoll/angular15-generator/issues/7)) ([d234a15](https://github.com/JeffLeFoll/angular15-generator/commit/d234a15))
+([#7](https://github.com/JeffLeFoll/angular15-generator/issues/7)) ([c2bfeca](https://github.com/JeffLeFoll/angular15-generator/commit/c2bfeca))
 ([d045160](https://github.com/JeffLeFoll/angular15-generator/commit/d045160)) ([3170fea](https://github.com/JeffLeFoll/angular15-generator/commit/3170fea))
 * **Webpack require:** Add a config option to use Webpack require for html template file.
 ([#6](https://github.com/JeffLeFoll/angular15-generator/issues/6)) ([8729112](https://github.com/JeffLeFoll/angular15-generator/commit/8729112))
