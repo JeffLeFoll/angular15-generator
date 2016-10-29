@@ -3,6 +3,6 @@
   "routesRoot": "src/app/routes",
   "componentsRootModuleName": "index.ts",
   "routesRootModuleName": "index.ts",
-  "updateOrCreate": true,
+  "updateOrCreate": false,
   "useWebpackRequire": false
 }
