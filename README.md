@@ -1,4 +1,4 @@
-## angular15-generator
+## angular 1.5 generator
 [![Latest NPM release][npm-badge]][npm-badge-url]
 [![TravisCI Build Status][travis-badge]][travis-badge-url]
 [![AppVeyor Build Status][appveyor-badge]][appveyor-badge-url]
@@ -47,6 +47,7 @@ If this is not your project structure, please have a look at the [Configuration]
 
 ```bash
 ag --help
+ag -v  / ag --version
 ag g --help
 ag g component --help
 ag g route --help
@@ -74,11 +75,14 @@ Please note that this is also compatible with the `--uc` flag describe below.
 
 You can use the `--uc` to update or create the module's index.ts file
 (with a name or not, the default one is in the config file).
-
 ```bash
 ag g component my-new-component --uc
 ag g route my-new-route-component --uc routes.ts
 ```
+Alternatively you can set the option `updateOrCreate` to true in your config file to always update module's index.ts file.
+
+If you use WebPack to build your project by setting the flag `useWebpackRequire` in the configuration file 
+the tool will require the html template file instead of using the template URL.
 
 ### Configuration
 
@@ -97,7 +101,9 @@ You can edit this file to specify your project's structure.
   "componentsRoot": "src/app/components",
   "routesRoot": "src/app/routes",
   "componentsRootModuleName": "index.ts",
-  "routesRootModuleName": "index.ts"
+  "routesRootModuleName": "index.ts",
+  "updateOrCreate": false,
+  "useWebpackRequire": false
 }
 ```
 (This is the config.json file for our default project structure)
@@ -113,12 +119,8 @@ Global package:
 npm uninstall -g angular15-generator
 npm cache clean
 npm install -g angular15-generator@latest
-```
 
-Local project package:
-```
-rm -rf node_modules
-npm install --save-dev angular15-generator@latest
+=> then check for new configuration options in the config file.
 ```
 
 ## Contributing
