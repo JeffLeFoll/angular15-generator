@@ -1,8 +1,12 @@
 {
   "componentsRoot": "src/app/components",
   "routesRoot": "src/app/routes",
+  "servicesRoot": "src/app/services",
+  "filtersRoot": "src/app/filters",
   "componentsRootModuleName": "index.ts",
   "routesRootModuleName": "index.ts",
+  "servicesRootModuleName": "index.ts",
+  "filtersRootModuleName": "index.ts",
   "updateOrCreate": false,
   "useWebpackRequire": false
 }
