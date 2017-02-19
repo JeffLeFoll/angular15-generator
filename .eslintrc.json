@@ -137,13 +137,22 @@
     "accessor-pairs": "off",
     "block-scoped-var": "off",
     "block-spacing": "off",
-    "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ],
     "callback-return": "off",
     "camelcase": "off",
     "comma-dangle": "error",
     "comma-spacing": "off",
     "comma-style": "off",
-    "complexity": ["off", 11],
+    "complexity": [
+      "off",
+      11
+    ],
     "computed-property-spacing": "off",
     "consistent-return": "off",
     "consistent-this": "off",
@@ -161,16 +170,22 @@
     "guard-for-in": "off",
     "handle-callback-err": "off",
     "id-length": "off",
-    "indent": [2,2],
+    "indent": [
+      2,
+      2
+    ],
     "init-declarations": "off",
     "jsx-quotes": "off",
-    "key-spacing": [2, {
-      "multiLine": {
-        "beforeColon": false,
-        "afterColon": true,
-        "mode": "minimum"
+    "key-spacing": [
+      2,
+      {
+        "multiLine": {
+          "beforeColon": false,
+          "afterColon": true,
+          "mode": "minimum"
+        }
       }
-    }],
+    ],
     "keyword-spacing": "off",
     "lines-around-comment": "off",
     "max-depth": "off",
@@ -184,7 +199,10 @@
     "newline-after-var": "off",
     "newline-before-return": "off",
     "newline-per-chained-call": "off",
-    "object-curly-spacing": [2, "always"],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
     "object-shorthand": "off",
     "one-var": "off",
     "one-var-declaration-per-line": "off",
