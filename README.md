@@ -51,17 +51,21 @@ ag -v  / ag --version
 ag g --help
 ag g component --help
 ag g route --help
+ag g service --help
+ag g filter --help
 ```
 
-### Generating Components and Routes Components
+### Generating Components
 
 You can use the `ag g` command to generate Angular components:
 ```bash
 ag g component my-new-component
 ag g route my-new-route-component
+ag g service my-new-route-service
+ag g filter my-new-route-filter
 ```
 
-If you want to create your component / route in an other folder that the one configured 
+If you want to create your component/route/service/filter in an other folder that the one configured 
 you can use the following syntax (**even on Windows system**) : 
 ```bash
 ag g component down/my-new-component
@@ -71,7 +75,7 @@ ag g route ../up/my-new-route-component
 ```
 Please note that this is also compatible with the `--uc` flag describe below.
 
-### Generating or Updating Components/Routes module's index file
+### Generating or Updating module's index file
 
 You can use the `--uc` to update or create the module's index.ts file
 (with a name or not, the default one is in the config file).
@@ -100,8 +104,12 @@ You can edit this file to specify your project's structure.
 {
   "componentsRoot": "src/app/components",
   "routesRoot": "src/app/routes",
+  "servicesRoot": "src/app/services",
+  "filtersRoot": "src/app/filters",
   "componentsRootModuleName": "index.ts",
   "routesRootModuleName": "index.ts",
+  "servicesRootModuleName": "index.ts",
+  "filtersRootModuleName": "index.ts",
   "updateOrCreate": false,
   "useWebpackRequire": false
 }
